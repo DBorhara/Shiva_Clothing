@@ -74,4 +74,6 @@ const mapDispatchToProps = (dispatch) => ({
   setCurrentUser: (user) => dispatch(setCurrentUser(user)),
 });
 
+// mapStateToProps is a utility which helps your component get updated state(which is updated by some other components),
+// mapDispatchToProps is a utility that helps your component to fire an action event (dispatching action which may cause change of application state)
 export default connect(mapStateToProps, mapDispatchToProps)(App);
