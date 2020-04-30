@@ -5,6 +5,9 @@ import { auth, createUserProfileDocument } from './firebase/firebase.utils';
 
 //Redux Actions
 import { setCurrentUser } from './redux/user/user.actions';
+//Selector
+import { selectCurrentUser } from './redux/user/user.selector';
+import { createStructuredSelector } from 'reselect';
 
 import './App.css';
 
@@ -65,8 +68,8 @@ class App extends Component {
 }
 
 //Access to User Status on Login
-const mapStateToProps = ({ user }) => ({
-  currentUser: user.currentUser,
+const mapStateToProps = createStructuredSelector({
+  currentUser: selectCurrentUser,
 });
 
 //user is the object payload in the store
