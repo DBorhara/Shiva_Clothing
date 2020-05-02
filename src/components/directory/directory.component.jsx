@@ -1,59 +1,25 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { connect } from 'react-redux';
 import './directory.styles.scss';
+
+import { createStructuredSelector } from 'reselect';
+
+import { selectDirectoryTiles } from '../../redux/directory/directory.selectors';
 
 //Import Component
 import MenuItem from '../menu-item/menu-item.component';
 
-class Directory extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      tiles: [
-        {
-          title: 'hats',
-          imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
-          id: 1,
-          linkUrl: 'hats',
-        },
-        {
-          title: 'jackets',
-          imageUrl: 'https://i.ibb.co/px2tCc3/jackets.png',
-          id: 2,
-          linkUrl: '',
-        },
-        {
-          title: 'sneakers',
-          imageUrl: 'https://i.ibb.co/0jqHpnp/sneakers.png',
-          id: 3,
-          linkUrl: '',
-        },
-        {
-          title: 'womens',
-          imageUrl: 'https://i.ibb.co/GCCdy8t/womens.png',
-          size: 'large',
-          id: 4,
-          linkUrl: '',
-        },
-        {
-          title: 'mens',
-          imageUrl: 'https://i.ibb.co/R70vBrQ/men.png',
-          size: 'large',
-          id: 5,
-          linkUrl: '',
-        },
-      ],
-    };
-  }
+const Directory = ({ tiles }) => (
+  <div className="directory-menu">
+    {tiles.map(({ id, ...otherTileProps }) => (
+      <MenuItem key={id} {...otherTileProps} />
+    ))}
+  </div>
+);
 
-  render() {
-    return (
-      <div className="directory-menu">
-        {this.state.tiles.map(({ id, ...otherTileProps }) => (
-          <MenuItem key={id} {...otherTileProps} />
-        ))}
-      </div>
-    );
-  }
-}
+const mapStateToProps = () =>
+  createStructuredSelector({
+    tiles: selectDirectoryTiles,
+  });
 
-export default Directory;
+export default connect(mapStateToProps)(Directory);
