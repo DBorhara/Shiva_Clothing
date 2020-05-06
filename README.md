@@ -51,7 +51,7 @@ npm install
 [SASS](https://sass-lang.com/)
 
 ## Updates Scheduled
-
+- [ ] Add Contact Page
 - [ ] Convert to React Hooks
 - [ ] Add Backend for Stripe Payments
 - [ ] Convert to PWA(Progressive Web Application)
