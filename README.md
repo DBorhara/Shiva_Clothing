@@ -1,68 +1,66 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Shiva Clothing Store
 
-## Available Scripts
+A fully functioning e-commerce site using React, Redux, and Firestore.
 
-In the project directory, you can run:
+## Installation
 
-### `npm start`
+Use the [node package manager](https://www.npmjs.com/) to install dependencies.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```bash
+npm install
+```
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Tech Used + Docs
 
-### `npm test`
+**JS Framework**
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+[ReactJS](https://reactjs.org/docs/getting-started.html)
 
-### `npm run build`
+[React-Router](https://reacttraining.com/react-router/web/guides/quick-start)
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Framework and State Management Binding**
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+[React-Redux](https://react-redux.js.org/introduction/quick-start)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**State Management**
 
-### `npm run eject`
+[Redux](https://redux.js.org/)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+[Redux_Persist](https://github.com/rt2zz/redux-persist)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+[Reselect](https://github.com/reduxjs/reselect)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+**User Authentication, OAuth, and Database**
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+[Firebase](https://firebase.google.com/docs)
 
-## Learn More
+**Payment Platform**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+[Stripe_API](https://stripe.com/docs/api)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+**Middleware**
 
-### Code Splitting
+[Redux_Logger](https://github.com/LogRocket/redux-logger)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+[Redux_Thunk](https://github.com/reduxjs/redux-thunk)
 
-### Analyzing the Bundle Size
+**CSS**
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+[Styled_Components](https://styled-components.com/docs)
 
-### Making a Progressive Web App
+[SASS](https://sass-lang.com/)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+## Updates Scheduled
 
-### Advanced Configuration
+- [ ] Convert to React Hooks
+- [ ] Add Backend for Stripe Payments
+- [ ] Convert to PWA(Progressive Web Application)
+- [ ] Add testing with Jest
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-### Deployment
+Please make sure to update tests as appropriate.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
