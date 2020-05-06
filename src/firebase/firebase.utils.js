@@ -39,6 +39,38 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
   return userRef;
 };
 
+//Make db call to populate with db with shop collection items(in App.js componentDidMount)
+export const addCollectionandDocuments = async (collectionKey, dataToAdd) => {
+  const collectionRef = firestore.collection(collectionKey);
+
+  const batch = firestore.batch();
+
+  dataToAdd.forEach((object) => {
+    const docRef = collectionRef.doc();
+    batch.set(docRef, object);
+  });
+
+  return await batch.commit();
+};
+
+//Collections data from DB transformed into usable object
+export const convertCollectionsSnapshotToMap = (collections) => {
+  const transformedCollection = collections.docs.map((docObj) => {
+    const { title, items } = docObj.data();
+    return {
+      routeName: encodeURI(title.toLowerCase()),
+      id: docObj.id,
+      title,
+      items,
+    };
+  });
+
+  return transformedCollection.reduce((accumulator, collection) => {
+    accumulator[collection.title.toLowerCase()] = collection;
+    return accumulator;
+  }, {});
+};
+
 firebase.initializeApp(config);
 
 export const auth = firebase.auth();

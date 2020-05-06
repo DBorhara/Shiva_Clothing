@@ -9,8 +9,8 @@ import { auth, createUserProfileDocument } from './firebase/firebase.utils';
 import { setCurrentUser } from './redux/user/user.actions';
 
 //Selector
-import { selectCurrentUser } from './redux/user/user.selectors';
 import { createStructuredSelector } from 'reselect';
+import { selectCurrentUser } from './redux/user/user.selectors';
 
 //Import Components
 import Homepage from './pages/homepage/homepage.component';
