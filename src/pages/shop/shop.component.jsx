@@ -1,12 +1,9 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { createStructuredSelector } from 'reselect';
 
-import WithSpinner from '../../components/with-spinner/with-spinner.component';
-
+// Fetch collections data from Firestore
 import { fetchCollectionsStartAsync } from '../../redux/shop/shop.actions';
-import { selectIsCollectionsLoaded } from '../../redux/shop/shop.selectors';
 
 //Containers with Loading Spinner
 import CollectionsOverviewContainer from '../../components/collections-overview/collections.container';
