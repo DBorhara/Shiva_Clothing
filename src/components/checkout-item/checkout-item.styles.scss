@@ -6,7 +6,7 @@
   padding: 15px 0;
   font-size: 20px;
   align-items: center;
-
+  color: white;
   .image-container {
     width: 23%;
     padding-right: 15px;
@@ -20,6 +20,13 @@
   .quantity,
   .price {
     width: 23%;
+  }
+
+  .quantity {
+    color: red;
+  }
+  .price {
+    color: green;
   }
 
   .quantity {
@@ -37,5 +44,6 @@
   .remove-button {
     padding-left: 12px;
     cursor: pointer;
+    color: hotpink;
   }
 }

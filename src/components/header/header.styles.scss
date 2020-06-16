@@ -6,25 +6,36 @@
   margin-bottom: 25px;
 
   .logo-container {
-    height: 100%;
-    width: 70px;
-    padding: 25px;
+    height: 8vh;
+    width: 11vw;
+    /* padding: 25px; */
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  .titleLogo{
-    padding: 25px
+  .titleLogo {
+    padding: 18px;
+    color: black;
+    background-color: white;
+    display: flex;
+    flex: auto;
   }
 
   .options {
-    width: 50%;
-    height: 100%;
+    width: 100vw;
+    height: 8vh;
     display: flex;
     align-items: center;
     justify-content: flex-end;
 
     .option {
-      padding: 10px 15px;
+      padding: 20px 15px;
       cursor: pointer;
+      color: white;
+      background-color: red;
+      margin: 1px;
     }
   }
 }

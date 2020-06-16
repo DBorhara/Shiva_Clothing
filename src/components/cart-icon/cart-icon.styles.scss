@@ -1,11 +1,12 @@
 .cart-icon {
-  width: 45px;
-  height: 45px;
+  height: 8vh;
+  width: 8vw;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  background-color: white;
 
   .shopping-icon {
     width: 24px;
@@ -16,6 +17,6 @@
     position: absolute;
     font-size: 10px;
     font-weight: bold;
-    bottom: 12px;
+    bottom: 25px;
   }
 }
